@@ -7,9 +7,19 @@ import kotlin.math.round
 
 class MyViewModel : ViewModel() {
 
+    private val numberOfButtons : MutableLiveData<Int> = MutableLiveData()
     private val currentRound : MutableLiveData<Int> = MutableLiveData()
     private val statAverages : MutableLiveData<Array<Double>> = MutableLiveData()
     var statTotals:Array<Int> = arrayOf(0,0,0)
+
+    fun setButtons(num : Int) {
+        numberOfButtons.value = num
+        numberOfButtons.postValue(numberOfButtons.value)
+    }
+
+    fun getButtons() : MutableLiveData<Int>{
+        return numberOfButtons
+    }
 
     fun getRound() : MutableLiveData<Int>{
         if(currentRound.value == null){
