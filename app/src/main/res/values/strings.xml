@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ClankResourceTracker</string>
+    <string name="movement">Movement</string>
+    <string name="skill">Skill</string>
+</resources>
